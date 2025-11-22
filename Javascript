@@ -1,0 +1,54 @@
+let lista = JSON.parse(localStorage.getItem("agenda") || "[]");
+const tbody = document.querySelector("tbody");
+
+function salvar() {
+  localStorage.setItem("agenda", JSON.stringify(lista));
+}
+
+function atualizar() {
+  tbody.innerHTML = "";
+  let total = 0;
+
+  lista.forEach((item, i) => {
+    total += Number(item.valor);
+
+    tbody.innerHTML += `
+      <tr>
+        <td>${item.hora}</td>
+        <td>${item.cliente}</td>
+        <td>${item.servico}</td>
+        <td>R$ ${item.valor}</td>
+        <td>${item.pagamento}</td>
+        <td><input type="checkbox" ${item.done ? "checked" : ""} 
+        onclick="marca(${i})"></td>
+        <td><button class="del" onclick="removeItem(${i})">X</button></td>
+      </tr>`;
+  });
+
+  document.querySelector("#total").innerText = total;
+  salvar();
+}
+
+function addItem() {
+  lista.push({
+    hora: hora.value,
+    cliente: cliente.value,
+    servico: servico.value,
+    valor: valor.value,
+    pagamento: pagamento.value,
+    done: false
+  });
+  atualizar();
+}
+
+function removeItem(i) {
+  lista.splice(i, 1);
+  atualizar();
+}
+
+function marca(i) {
+  lista[i].done = !lista[i].done;
+  atualizar();
+}
+
+atualizar();

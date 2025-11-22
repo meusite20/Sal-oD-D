@@ -1,5 +1,23 @@
-body{font-family:sans-serif;background:#fff1f7;color:#733;padding:10px;margin:0}
-h1{text-align:center;color:#b3476b}
-table,td,th{border:1px solid #f8a;border-collapse:collapse;padding:6px;background:#ffe6ee}
-button{background:#f7a5c0;color:#fff;border:0;padding:6px 10px;border-radius:8px}
-form input,select{margin:4px;padding:8px;border:1px solid #f7a;border-radius:6px}
+/* 🌺 FUNDO COM IMAGEM DE FLORES */
+body {
+  background-image: url("flores.jpg");  /* ← nome da imagem */
+  background-size: cover;               /* cobre toda a tela */
+  background-position: center;          /* centraliza a imagem */
+  background-attachment: fixed;         /* efeito fixo / elegante */
+  background-repeat: no-repeat;         /* não repete a imagem */
+  
+  font-family: "Poppins", sans-serif;
+  color: #733;
+  margin: 0;
+  padding: 15px;
+}
+
+/* 🌸 Para deixar o conteúdo mais legível sobre o fundo */
+.card {
+  background: rgba(255, 255, 255, 0.8); /* branco com transparência */
+  backdrop-filter: blur(6px);           /* efeito glass */
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin-top: 20px;
+}

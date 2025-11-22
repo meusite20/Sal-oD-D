@@ -1,0 +1,23 @@
+/* 🌺 FUNDO COM IMAGEM DE FLORES */
+body {
+  background-image: url("flores.jpg");  /* ← nome da imagem */
+  background-size: cover;               /* cobre toda a tela */
+  background-position: center;          /* centraliza a imagem */
+  background-attachment: fixed;         /* efeito fixo / elegante */
+  background-repeat: no-repeat;         /* não repete a imagem */
+  
+  font-family: "Poppins", sans-serif;
+  color: #733;
+  margin: 0;
+  padding: 15px;
+}
+
+/* 🌸 Para deixar o conteúdo mais legível sobre o fundo */
+.card {
+  background: rgba(255, 255, 255, 0.8); /* branco com transparência */
+  backdrop-filter: blur(6px);           /* efeito glass */
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin-top: 20px;
+}
